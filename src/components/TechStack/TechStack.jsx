@@ -1,14 +1,34 @@
-import { useMemo } from 'react'
-import { motion } from 'framer-motion'
-import SEOHead from '../SEO/SEOHead'
-import { SEO_CONFIGS } from '../SEO/seoConfigs'
-import { 
-  SiSpringboot, 
-  SiReact, 
-  SiTailwindcss, 
-  SiMysql, 
-  SiMongodb, 
-  SiDocker, 
+import { useMemo } from "react";
+import { motion } from "framer-motion";
+import SEOHead from "../SEO/SEOHead";
+import { SEO_CONFIGS } from "../SEO/seoConfigs";
+import {
+  FaDatabase,
+  FaTools,
+  FaCloud,
+  FaRocket,
+  FaJava,
+  FaCube,
+  FaBox,
+  FaCode,
+  FaBrain,
+  FaShieldAlt,
+  FaUsers,
+  FaMobileAlt,
+  FaServer,
+  FaClock,
+  FaCreditCard,
+  FaGlobe,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+
+import {
+  SiSpringboot,
+  SiReact,
+  SiTailwindcss,
+  SiMysql,
+  SiMongodb,
+  SiDocker,
   SiGit,
   SiIntellijidea,
   SiPostman,
@@ -19,133 +39,532 @@ import {
   SiGithub,
   SiJavascript,
   SiTypescript,
-  SiNeo4J
-} from 'react-icons/si'
-import { FaDatabase, FaTools, FaCloud, FaRocket, FaJava, FaCube, FaBox, FaCode, FaBrain } from 'react-icons/fa'
+} from "react-icons/si";
 
 function TechStack() {
   // Tech Stack data organized by categories
-  const techCategories = useMemo(() => [
+  const techCategories = useMemo(
+    () => [
+      {
+        id: 1,
+        title: "Backend Engineering",
+        icon: FaCode,
+        color: "text-orange-400",
+        bgColor: "bg-orange-500/10",
+        borderColor: "border-orange-500/20",
+        technologies: [
+          { name: "Java", icon: FaJava, level: "Expert", color: "#ED8B00" },
+          {
+            name: "Spring Boot",
+            icon: SiSpringboot,
+            level: "Expert",
+            color: "#6DB33F",
+          },
+          { name: "NestJS", icon: FaCode, level: "Advanced", color: "#E0234E" },
+          {
+            name: "Django",
+            icon: FaCode,
+            level: "Intermediate",
+            color: "#092E20",
+          },
+          {
+            name: "Node.js",
+            icon: FaCode,
+            level: "Advanced",
+            color: "#68A063",
+          },
+          {
+            name: "GraphQL",
+            icon: FaCode,
+            level: "Intermediate",
+            color: "#E10098",
+          },
+          {
+            name: "REST APIs",
+            icon: FaRocket,
+            level: "Expert",
+            color: "#FF6B6B",
+          },
+          {
+            name: "WebSocket",
+            icon: FaCode,
+            level: "Advanced",
+            color: "#00C2FF",
+          },
+          {
+            name: "JWT Authentication",
+            icon: FaShieldAlt,
+            level: "Expert",
+            color: "#F59E0B",
+          },
+          {
+            name: "RBAC & Multi-Tenancy",
+            icon: FaUsers,
+            level: "Advanced",
+            color: "#8B5CF6",
+          },
+        ],
+      },
+
+      {
+        id: 2,
+        title: "Frontend & Mobile",
+        icon: FaRocket,
+        color: "text-cyan-400",
+        bgColor: "bg-cyan-500/10",
+        borderColor: "border-cyan-500/20",
+        technologies: [
+          {
+            name: "React.js",
+            icon: SiReact,
+            level: "Advanced",
+            color: "#61DAFB",
+          },
+          {
+            name: "Next.js",
+            icon: SiReact,
+            level: "Advanced",
+            color: "#FFFFFF",
+          },
+          {
+            name: "TypeScript",
+            icon: SiTypescript,
+            level: "Advanced",
+            color: "#3178C6",
+          },
+          {
+            name: "JavaScript",
+            icon: SiJavascript,
+            level: "Advanced",
+            color: "#F7DF1E",
+          },
+          {
+            name: "TailwindCSS",
+            icon: SiTailwindcss,
+            level: "Expert",
+            color: "#06B6D4",
+          },
+          {
+            name: "React Native",
+            icon: SiReact,
+            level: "Intermediate",
+            color: "#61DAFB",
+          },
+          {
+            name: "Ionic Capacitor",
+            icon: FaMobileAlt,
+            level: "Intermediate",
+            color: "#3880FF",
+          },
+          {
+            name: "Framer Motion",
+            icon: SiFramer,
+            level: "Advanced",
+            color: "#0055FF",
+          },
+        ],
+      },
+
+      {
+        id: 3,
+        title: "Databases & Storage",
+        icon: FaDatabase,
+        color: "text-green-400",
+        bgColor: "bg-green-500/10",
+        borderColor: "border-green-500/20",
+        technologies: [
+          {
+            name: "PostgreSQL",
+            icon: FaDatabase,
+            level: "Expert",
+            color: "#336791",
+          },
+          { name: "MySQL", icon: SiMysql, level: "Advanced", color: "#4479A1" },
+          {
+            name: "MongoDB",
+            icon: SiMongodb,
+            level: "Advanced",
+            color: "#47A248",
+          },
+          {
+            name: "Redis",
+            icon: FaDatabase,
+            level: "Advanced",
+            color: "#DC382D",
+          },
+          {
+            name: "ClickHouse",
+            icon: FaDatabase,
+            level: "Intermediate",
+            color: "#FFCC01",
+          },
+          {
+            name: "MinIO",
+            icon: FaCloud,
+            level: "Intermediate",
+            color: "#C72E49",
+          },
+          {
+            name: "AWS S3",
+            icon: FaCloud,
+            level: "Advanced",
+            color: "#FF9900",
+          },
+          {
+            name: "Prisma ORM",
+            icon: FaCube,
+            level: "Advanced",
+            color: "#2D3748",
+          },
+        ],
+      },
+
+      {
+        id: 4,
+        title: "Cloud & DevOps",
+        icon: FaCloud,
+        color: "text-blue-400",
+        bgColor: "bg-blue-500/10",
+        borderColor: "border-blue-500/20",
+        technologies: [
+          {
+            name: "Docker",
+            icon: SiDocker,
+            level: "Advanced",
+            color: "#2496ED",
+          },
+          {
+            name: "Nginx",
+            icon: FaServer,
+            level: "Advanced",
+            color: "#009639",
+          },
+          {
+            name: "Cloudflare",
+            icon: FaCloud,
+            level: "Intermediate",
+            color: "#F38020",
+          },
+          {
+            name: "BullMQ Queues",
+            icon: FaServer,
+            level: "Advanced",
+            color: "#EF4444",
+          },
+          {
+            name: "Apache Airflow",
+            icon: FaServer,
+            level: "Intermediate",
+            color: "#017CEE",
+          },
+          {
+            name: "Cron Jobs",
+            icon: FaClock,
+            level: "Advanced",
+            color: "#F59E0B",
+          },
+          {
+            name: "Vercel",
+            icon: SiVercel,
+            level: "Advanced",
+            color: "#FFFFFF",
+          },
+          {
+            name: "GitHub Actions",
+            icon: SiGithub,
+            level: "Intermediate",
+            color: "#181717",
+          },
+        ],
+      },
+
+      {
+        id: 5,
+        title: "System Design & Architecture",
+        icon: FaBrain,
+        color: "text-purple-400",
+        bgColor: "bg-purple-500/10",
+        borderColor: "border-purple-500/20",
+        technologies: [
+          {
+            name: "Microservices",
+            icon: FaCube,
+            level: "Advanced",
+            color: "#8B5CF6",
+          },
+          {
+            name: "Monolith Architecture",
+            icon: FaBox,
+            level: "Advanced",
+            color: "#F97316",
+          },
+          {
+            name: "Event-Driven Systems",
+            icon: FaRocket,
+            level: "Intermediate",
+            color: "#06B6D4",
+          },
+          {
+            name: "Factory Design Pattern",
+            icon: FaCode,
+            level: "Advanced",
+            color: "#EAB308",
+          },
+          {
+            name: "Scalable APIs",
+            icon: FaServer,
+            level: "Advanced",
+            color: "#10B981",
+          },
+          {
+            name: "Authentication Systems",
+            icon: FaShieldAlt,
+            level: "Expert",
+            color: "#EF4444",
+          },
+          {
+            name: "Payment Systems",
+            icon: FaCreditCard,
+            level: "Advanced",
+            color: "#22C55E",
+          },
+          {
+            name: "Multi-Tenant Systems",
+            icon: FaUsers,
+            level: "Advanced",
+            color: "#A855F7",
+          },
+        ],
+      },
+
+      {
+        id: 6,
+        title: "Cloud Platforms & Integrations",
+        icon: FaGlobe,
+        color: "text-amber-400",
+        bgColor: "bg-amber-500/10",
+        borderColor: "border-amber-500/20",
+        technologies: [
+          { name: "AWS", icon: FaCloud, level: "Advanced", color: "#FF9900" },
+          {
+            name: "Azure",
+            icon: FaCloud,
+            level: "Intermediate",
+            color: "#0078D4",
+          },
+          {
+            name: "Google Cloud",
+            icon: FaCloud,
+            level: "Intermediate",
+            color: "#4285F4",
+          },
+          {
+            name: "Huawei Cloud",
+            icon: FaCloud,
+            level: "Beginner",
+            color: "#FF0000",
+          },
+          {
+            name: "Tencent Cloud",
+            icon: FaCloud,
+            level: "Beginner",
+            color: "#0052D9",
+          },
+          {
+            name: "Razorpay",
+            icon: FaCreditCard,
+            level: "Advanced",
+            color: "#0C2451",
+          },
+          {
+            name: "PhonePe",
+            icon: FaCreditCard,
+            level: "Intermediate",
+            color: "#5F259F",
+          },
+          {
+            name: "Google Maps API",
+            icon: FaMapMarkerAlt,
+            level: "Intermediate",
+            color: "#34A853",
+          },
+        ],
+      },
+    ],
+    [],
+  );
+  // const techCategories = useMemo(() => [
+  //   {
+  //     id: 1,
+  //     title: "Backend Development",
+  //     icon: FaCode,
+  //     color: "text-orange-400",
+  //     bgColor: "bg-orange-500/10",
+  //     borderColor: "border-orange-500/20",
+  //     technologies: [
+  //       { name: "Java", icon: FaJava, level: "Expert", color: "#ED8B00" },
+  //       { name: "Spring Boot", icon: SiSpringboot, level: "Advanced", color: "#6DB33F" },
+  //       { name: "Spring Security", icon: SiSpringboot, level: "Advanced", color: "#6DB33F" },
+  //       { name: "Spring Data JPA", icon: SiSpringboot, level: "Advanced", color: "#6DB33F" },
+  //       { name: "WebSocket", icon: FaCode, level: "Intermediate", color: "#FF6B6B" },
+  //       { name: "Maven", icon: FaBox, level: "Proficient", color: "#C71A36" },
+  //     ]
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Frontend Development",
+  //     icon: FaRocket,
+  //     color: "text-amber-400",
+  //     bgColor: "bg-amber-500/10",
+  //     borderColor: "border-amber-500/20",
+  //     technologies: [
+  //       { name: "React.js", icon: SiReact, level: "Advanced", color: "#61DAFB" },
+  //       { name: "TailwindCSS", icon: SiTailwindcss, level: "Expert", color: "#06B6D4" },
+  //       { name: "Three.js", icon: FaCube, level: "Intermediate", color: "#000000" },
+  //       { name: "Framer Motion", icon: SiFramer, level: "Advanced", color: "#0055FF" }
+  //     ]
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Database Systems",
+  //     icon: FaDatabase,
+  //     color: "text-green-400",
+  //     bgColor: "bg-green-500/10",
+  //     borderColor: "border-green-500/20",
+  //     technologies: [
+  //       { name: "MySQL", icon: SiMysql, level: "Advanced", color: "#4479A1" },
+  //       { name: "MariaDB", icon: SiMariadb, level: "Advanced", color: "#003545" },
+  //       { name: "MongoDB", icon: SiMongodb, level: "Intermediate", color: "#47A248" },
+  //       { name: "Neo4J", icon: SiNeo4J, level: "Beginner", color: "#008CC1" }
+  //     ]
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Development Tools",
+  //     icon: FaTools,
+  //     color: "text-purple-400",
+  //     bgColor: "bg-purple-500/10",
+  //     borderColor: "border-purple-500/20",
+  //     technologies: [
+  //       { name: "IntelliJ IDEA", icon: SiIntellijidea, level: "Expert", color: "#000000" },
+  //       { name: "VS Code", icon: FaCode, level: "Advanced", color: "#007ACC" },
+  //       { name: "Git", icon: SiGit, level: "Advanced", color: "#F05032" },
+  //       { name: "Postman", icon: SiPostman, level: "Proficient", color: "#FF6C37" }
+  //     ]
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Cloud & Deployment",
+  //     icon: FaCloud,
+  //     color: "text-cyan-400",
+  //     bgColor: "bg-cyan-500/10",
+  //     borderColor: "border-cyan-500/20",
+  //     technologies: [
+  //       { name: "Docker", icon: SiDocker, level: "Intermediate", color: "#2496ED" },
+  //       { name: "Vercel", icon: SiVercel, level: "Advanced", color: "#000000" },
+  //       { name: "Cloudinary", icon: SiCloudinary, level: "Proficient", color: "#3448C5" },
+  //       { name: "GitHub", icon: SiGithub, level: "Advanced", color: "#181717" }
+  //     ]
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "AI & Automation",
+  //     icon: FaBrain,
+  //     color: "text-amber-300",
+  //     bgColor: "bg-amber-500/10",
+  //     borderColor: "border-amber-500/20",
+  //     technologies: [
+  //       { name: "ChatGPT", icon: FaBrain, level: "Advanced", color: "#10A37F" },
+  //       { name: "Claude AI", icon: FaBrain, level: "Proficient", color: "#CC785C" }
+  //     ]
+  //   }
+  // ], [])
+
+  // Project highlights using tech stack
+  const projectHighlights = useMemo(
+  () => [
     {
       id: 1,
-      title: "Backend Development",
-      icon: FaCode,
-      color: "text-orange-400",
-      bgColor: "bg-orange-500/10",
-      borderColor: "border-orange-500/20",
-      technologies: [
-        { name: "Java", icon: FaJava, level: "Expert", color: "#ED8B00" },
-        { name: "Spring Boot", icon: SiSpringboot, level: "Advanced", color: "#6DB33F" },
-        { name: "Spring Security", icon: SiSpringboot, level: "Advanced", color: "#6DB33F" },
-        { name: "Spring Data JPA", icon: SiSpringboot, level: "Advanced", color: "#6DB33F" },
-        { name: "WebSocket", icon: FaCode, level: "Intermediate", color: "#FF6B6B" },
-        { name: "Maven", icon: FaBox, level: "Proficient", color: "#C71A36" }
-      ]
+      name: "Techflu – Tech Rental Platform",
+      description:
+        "Production-grade B2B & B2C rental platform with user, admin, and delivery partner panels.",
+      techUsed: [
+        "NestJS",
+        "Next.js",
+        "PostgreSQL",
+        "Redis",
+        "BullMQ",
+        "AWS S3",
+      ],
+      highlight:
+        "Built scalable order management, KYC verification, payment automation, and delivery tracking workflows.",
     },
     {
       id: 2,
-      title: "Frontend Development",
-      icon: FaRocket,
-      color: "text-amber-400",
-      bgColor: "bg-amber-500/10",
-      borderColor: "border-amber-500/20",
-      technologies: [
-        { name: "React.js", icon: SiReact, level: "Advanced", color: "#61DAFB" },
-        { name: "TailwindCSS", icon: SiTailwindcss, level: "Expert", color: "#06B6D4" },
-        { name: "Three.js", icon: FaCube, level: "Intermediate", color: "#000000" },
-        { name: "Framer Motion", icon: SiFramer, level: "Advanced", color: "#0055FF" }
-      ]
+      name: "Reusable Multi-Tenant IDP",
+      description:
+        "Centralized authentication and identity provider platform with scalable multi-tenant architecture.",
+      techUsed: [
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "Redis",
+        "Kafka",
+        "React.js",
+      ],
+      highlight:
+        "Implemented RBAC, OTP authentication, tenant-based access control, and scalable auth workflows.",
     },
     {
       id: 3,
-      title: "Database Systems",
-      icon: FaDatabase,
-      color: "text-green-400",
-      bgColor: "bg-green-500/10",
-      borderColor: "border-green-500/20",
-      technologies: [
-        { name: "MySQL", icon: SiMysql, level: "Advanced", color: "#4479A1" },
-        { name: "MariaDB", icon: SiMariadb, level: "Advanced", color: "#003545" },
-        { name: "MongoDB", icon: SiMongodb, level: "Intermediate", color: "#47A248" },
-        { name: "Neo4J", icon: SiNeo4J, level: "Beginner", color: "#008CC1" }
-      ]
+      name: "Self-Hosted Home Server Platform",
+      description:
+        "Personal cloud infrastructure platform hosted on a self-managed home server environment.",
+      techUsed: [
+        "Docker",
+        "Nginx",
+        "Cloudflare",
+        "MinIO",
+        "Linux",
+        "VPS Networking",
+      ],
+      highlight:
+        "Built a complete self-hosted deployment ecosystem with reverse proxy routing, object storage, and secure public access.",
     },
     {
       id: 4,
-      title: "Development Tools",
-      icon: FaTools,
-      color: "text-purple-400",
-      bgColor: "bg-purple-500/10",
-      borderColor: "border-purple-500/20",
-      technologies: [
-        { name: "IntelliJ IDEA", icon: SiIntellijidea, level: "Expert", color: "#000000" },
-        { name: "VS Code", icon: FaCode, level: "Advanced", color: "#007ACC" },
-        { name: "Git", icon: SiGit, level: "Advanced", color: "#F05032" },
-        { name: "Postman", icon: SiPostman, level: "Proficient", color: "#FF6C37" }
-      ]
+      name: "Cloudverse – FinOps Platform",
+      description:
+        "Cloud cost management and chargeback platform for enterprise infrastructure analytics.",
+      techUsed: [
+        "NestJS",
+        "GraphQL",
+        "Prisma",
+        "PostgreSQL",
+        "Redis",
+        "ClickHouse",
+      ],
+      highlight:
+        "Developed pool-based cost allocation, ledger processing, and automated chargeback workflows.",
     },
-    {
-      id: 5,
-      title: "Cloud & Deployment",
-      icon: FaCloud,
-      color: "text-cyan-400",
-      bgColor: "bg-cyan-500/10",
-      borderColor: "border-cyan-500/20",
-      technologies: [
-        { name: "Docker", icon: SiDocker, level: "Intermediate", color: "#2496ED" },
-        { name: "Vercel", icon: SiVercel, level: "Advanced", color: "#000000" },
-        { name: "Cloudinary", icon: SiCloudinary, level: "Proficient", color: "#3448C5" },
-        { name: "GitHub", icon: SiGithub, level: "Advanced", color: "#181717" }
-      ]
-    },
-    {
-      id: 6,
-      title: "AI & Automation",
-      icon: FaBrain,
-      color: "text-amber-300",
-      bgColor: "bg-amber-500/10", 
-      borderColor: "border-amber-500/20",
-      technologies: [
-        { name: "ChatGPT", icon: FaBrain, level: "Advanced", color: "#10A37F" },
-        { name: "Claude AI", icon: FaBrain, level: "Proficient", color: "#CC785C" }
-      ]
-    }
-  ], [])
-
-  // Project highlights using tech stack
-  const projectHighlights = useMemo(() => [
-    {
-      id: 1,
-      name: "CodeHub Platform",
-      description: "Full-stack collaboration platform with real-time features",
-      techUsed: ["Java 23", "Spring Boot", "React", "WebSocket", "MariaDB"],
-      highlight: "Real-time code collaboration with 70+ language support"
-    },
-    {
-      id: 2,
-      name: "NatureGrain E-commerce",
-      description: "Complete e-commerce solution with admin dashboard",
-      techUsed: ["Spring Security", "React", "MySQL", "Cloudinary"],
-      highlight: "JWT authentication with comprehensive admin panel"
-    },
-    {
-      id: 3,
-      name: "Portfolio Website",
-      description: "Modern responsive portfolio with 3D animations",
-      techUsed: ["React 19", "Three.js", "TailwindCSS 4", "Framer Motion"],
-      highlight: "Performance-optimized with engaging user experience"
-    }
-  ], [])
+  ],
+  [],
+);
 
   const getLevelColor = (level) => {
     switch (level) {
-      case 'Expert': return 'text-amber-400'
-      case 'Advanced': return 'text-amber-300'
-      case 'Intermediate': return 'text-yellow-400'
-      case 'Proficient': return 'text-amber-500'
-      default: return 'text-neutral-400'
+      case "Expert":
+        return "text-amber-400";
+      case "Advanced":
+        return "text-amber-300";
+      case "Intermediate":
+        return "text-yellow-400";
+      case "Proficient":
+        return "text-amber-500";
+      default:
+        return "text-neutral-400";
     }
-  }
+  };
 
   return (
     <>
@@ -166,7 +585,7 @@ function TechStack() {
               </span>
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -175,21 +594,22 @@ function TechStack() {
               <span className="gradient-text">Technologies</span> & Tools
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               className="text-xl text-neutral-400 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              A comprehensive overview of the technologies, frameworks, and tools I use to build 
-              modern, scalable applications. From backend development to cloud deployment.
+              A comprehensive overview of the technologies, frameworks, and
+              tools I use to build modern, scalable applications. From backend
+              development to cloud deployment.
             </motion.p>
           </div>
 
           {/* Tech Categories Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {techCategories.map((category, categoryIndex) => {
-              const IconComponent = category.icon
+              const IconComponent = category.icon;
               return (
                 <motion.div
                   key={category.id}
@@ -198,13 +618,15 @@ function TechStack() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: categoryIndex * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.02,
-                    transition: { duration: 0.2 }
+                    transition: { duration: 0.2 },
                   }}
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <div className={`w-12 h-12 ${category.bgColor} rounded-xl flex items-center justify-center`}>
+                    <div
+                      className={`w-12 h-12 ${category.bgColor} rounded-xl flex items-center justify-center`}
+                    >
                       <IconComponent className={`w-6 h-6 ${category.color}`} />
                     </div>
                     <h3 className="text-lg font-bold text-neutral-100">
@@ -214,7 +636,7 @@ function TechStack() {
 
                   <div className="space-y-4">
                     {category.technologies.map((tech, techIndex) => {
-                      const TechIcon = tech.icon
+                      const TechIcon = tech.icon;
                       return (
                         <motion.div
                           key={techIndex}
@@ -223,36 +645,38 @@ function TechStack() {
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.3 + techIndex * 0.1 }}
                           viewport={{ once: true }}
-                          whileHover={{ 
+                          whileHover={{
                             x: 5,
-                            backgroundColor: "rgba(38, 38, 38, 0.5)"
+                            backgroundColor: "rgba(38, 38, 38, 0.5)",
                           }}
                         >
                           <div className="flex items-center gap-3">
-                            <TechIcon 
-                              className="w-5 h-5" 
+                            <TechIcon
+                              className="w-5 h-5"
                               style={{ color: tech.color }}
                             />
                             <span className="font-medium text-neutral-200">
                               {tech.name}
                             </span>
                           </div>
-                          <span className={`text-sm font-semibold ${getLevelColor(tech.level)}`}>
+                          <span
+                            className={`text-sm font-semibold ${getLevelColor(tech.level)}`}
+                          >
                             {tech.level}
                           </span>
                         </motion.div>
-                      )
+                      );
                     })}
                   </div>
                 </motion.div>
-              )
+              );
             })}
           </div>
 
           {/* Project Highlights */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <motion.h2 
+              <motion.h2
                 className="text-3xl font-bold gradient-text mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -261,14 +685,15 @@ function TechStack() {
               >
                 Tech Stack in Action
               </motion.h2>
-              <motion.p 
+              <motion.p
                 className="text-neutral-400 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                Real projects showcasing how I apply these technologies to solve problems
+                Real projects showcasing how I apply these technologies to solve
+                problems
               </motion.p>
             </div>
 
@@ -281,9 +706,9 @@ function TechStack() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.02,
-                    transition: { duration: 0.2 }
+                    transition: { duration: 0.2 },
                   }}
                 >
                   <h3 className="text-xl font-bold text-neutral-100 mb-3">
@@ -292,7 +717,7 @@ function TechStack() {
                   <p className="text-neutral-400 mb-4 leading-relaxed">
                     {project.description}
                   </p>
-                  
+
                   <div className="mb-4">
                     <p className="text-amber-400 font-medium text-sm mb-2">
                       Key Technologies:
@@ -318,12 +743,10 @@ function TechStack() {
               ))}
             </div>
           </div>
-
-
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default TechStack
+export default TechStack;

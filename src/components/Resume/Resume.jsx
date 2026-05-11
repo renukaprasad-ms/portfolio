@@ -1,149 +1,142 @@
-import { useState, useCallback, useMemo } from 'react'
-import { FaDownload, FaEye, FaFilePdf, FaSpinner, FaGraduationCap, FaBriefcase, FaCertificate, FaAward } from 'react-icons/fa'
-import SEOHead from '../SEO/SEOHead'
-import { SEO_CONFIGS } from '../SEO/seoConfigs'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useCallback, useMemo } from "react";
+import {
+  FaDownload,
+  FaEye,
+  FaFilePdf,
+  FaSpinner,
+  FaGraduationCap,
+  FaBriefcase,
+  FaCertificate,
+  FaAward,
+} from "react-icons/fa";
+import SEOHead from "../SEO/SEOHead";
+import { SEO_CONFIGS } from "../SEO/seoConfigs";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Resume() {
-  const [showPDF, setShowPDF] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const [pdfError, setPdfError] = useState(false)
+  const [showPDF, setShowPDF] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [pdfError, setPdfError] = useState(false);
 
   // Use useCallback to prevent unnecessary re-renders
   const handleViewPDF = useCallback(() => {
-    setIsLoading(true)
-    setPdfError(false)
+    setIsLoading(true);
+    setPdfError(false);
     // Reduced loading time for better UX
     setTimeout(() => {
-      setIsLoading(false)
-      setShowPDF(true)
-    }, 500)
-  }, [])
+      setIsLoading(false);
+      setShowPDF(true);
+    }, 500);
+  }, []);
 
   const handleDownloadPDF = useCallback(() => {
-    const link = document.createElement('a')
-    link.href = '/documents/NguyenTranGiaSi_Intern_Backend_Developer.pdf'
-    link.download = 'NguyenTranGiaSi_Intern_Backend_Developer.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }, [])
+    const link = document.createElement("a");
+    link.href = "/documents/NguyenTranGiaSi_Intern_Backend_Developer.pdf";
+    link.download = "NguyenTranGiaSi_Intern_Backend_Developer.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, []);
 
   // Memoize static data for performance - Updated with real resume content
-  const experiences = useMemo(() => [
-    {
-      title: "Team Leader & Fullstack Developer",
-      company: "Nexatech – E-Commerce Platform",
-      period: "March 2026 - Present",
-      location: "Ho Chi Minh City, Vietnam",
-      achievements: [
-        "Architected a scalable e-commerce system using Micro Frontend (Next.js Module Federation) and Microservice patterns",
-        "Led a team of 4 developers with independently deployable services (Auth, Blog, Host App)",
-        "Tech stack: Next.js, React, TypeScript, TailwindCSS (Frontend); Spring Boot microservices, RESTful APIs, JWT (Backend)",
-        "Implemented user authentication, product catalog, shopping cart, order management, blog module, and admin dashboard"
-      ]
-    },
-    {
-      title: "Team Leader & Fullstack Developer",
-      company: "Chatly – Real-time Messaging Platform",
-      period: "March 2026 - Present",
-      location: "Ho Chi Minh City, Vietnam",
-      achievements: [
-        "Built a scalable real-time messaging platform supporting 1–1 and group chat",
-        "Backend: Spring Boot, WebSocket (STOMP), PostgreSQL, MongoDB, and Redis",
-        "Mobile: React Native (Expo) + React, TypeScript, TailwindCSS",
-        "Features: real-time messaging, presence & typing indicators, media upload (S3), and read receipts"
-      ]
-    },
-    {
-      title: "Fullstack Developer",
-      company: "Personal Projects",
-      period: "April 2025 - Present",
-      location: "Ho Chi Minh City, Vietnam",
-      achievements: [
-        "Developed Portfolio website showcasing web development skills using React 19 and TailwindCSS 4",
-        "Built CodeHub platform for developers to share and collaborate on code snippets with real-time features",
-        "Created NatureGrain e-commerce platform for organic food retail with complete admin dashboard",
-        "Implemented modern technologies including Spring Boot, JWT security, and cloud services integration"
-      ]
-    },
-    {
-      title: "Backend Developer (CodeHub Project)",
-      company: "Personal Development",
-      period: "June 2025 - July 2025",
-      location: "Ho Chi Minh City, Vietnam",
-      achievements: [
-        "Built full-stack platform using Spring Boot (Java 23) and Spring Security with JWT authentication",
-        "Implemented RESTful APIs and WebSocket for real-time collaboration features",
-        "Integrated MariaDB/MySQL database with comprehensive data modeling",
-        "Added multi-language snippet support (70+) and notification system with Cloudinary integration"
-      ]
-    }
-  ], []);
+  const experiences = useMemo(
+    () => [
+      {
+        title: "Software Engineer",
+        company: "Turbostart",
+        period: "03/2025 - Present",
+        location: "Bangalore, India",
+        achievements: [
+          "Worked as a Full-Stack Engineer across scalable web and mobile applications for real-world B2B and B2C products",
+          "Delivered 10+ client projects end-to-end, contributing to backend systems, APIs, frontend development, deployment, and production delivery",
+          "Designed and developed scalable backend architectures, REST APIs, authentication systems, payment integrations, and business workflows",
+          "Built responsive and high-performance user interfaces using React.js, Next.js, and modern frontend technologies",
+          "Worked on cloud deployment, database design, Redis caching, queue-based processing, and system optimization to improve scalability and reliability",
+          "Collaborated directly with clients and cross-functional teams to deliver production-grade applications and features on time",
+          "Applied strong Data Structures & Algorithms and system design fundamentals to build efficient and maintainable solutions",
+          "Contributed to enterprise-grade projects including Techflu (Rental Platform), Cloudverse (FinOps Platform), AuraML (Multi-Tenant SaaS), mobile applications, and reusable authentication platforms",
+        ],
+      },
+    ],
+    [],
+  );
 
   // Education data - also memoized with real information
-  const education = useMemo(() => [
-    {
-      degree: "Bachelor of Software Engineering",
-      institution: "IUH - Industrial University of Ho Chi Minh City",
-      period: "August 2022 - Present",
-      location: "Ho Chi Minh City, Vietnam",
-      gpa: "3.44/4.0",
-      details: "Final-year Software Engineering student with solid experience in Java and Spring Boot. Passionate about backend development, database design, and building scalable applications."
-    }
-  ], []);
+  const education = useMemo(
+    () => [
+      {
+        degree: "Bachelor of Science (B.Sc)",
+        institution: "GMS Academy",
+        period: "2024",
+        location: "Bangalore, India",
+        details:
+          "Focused on software engineering fundamentals, backend development, scalable systems, and modern full-stack application development with hands-on industry experience.",
+      },
+    ],
+    [],
+  );
 
   // Certifications - memoized with real project-based accomplishments
-  const certifications = useMemo(() => [
-    {
-      name: "Java Backend Development",
-      issuer: "Self-Study & Practice",
-      year: "2024-2025",
-      details: "Spring Boot, Spring Security, Spring Data JPA expertise demonstrated through multiple projects"
-    },
-    {
-      name: "Full Stack Web Development",
-      issuer: "Project-Based Learning",
-      year: "2025",
-      details: "React 19, TailwindCSS 4, Modern JavaScript, RESTful APIs development"
-    },
-    {
-      name: "Database Design & Management",
-      issuer: "Practical Implementation",
-      year: "2025",
-      details: "MySQL, MariaDB, MongoDB, and Neo4J through CodeHub and NatureGrain projects"
-    }
-  ], []);
+  const certifications = useMemo(
+    () => [
+      {
+        name: "Full Stack Development Program",
+        issuer: "BoscoCoder (MAANG-led Program)",
+        year: "2024",
+        details:
+          "Completed intensive full-stack engineering training focused on Data Structures & Algorithms, backend systems, frontend development, and scalable application architecture.",
+      },
+      {
+        name: "NASSCOM Certification",
+        issuer: "NASSCOM",
+        year: "2024",
+        details:
+          "Industry-recognized certification validating software engineering and technical development skills.",
+      },
+      {
+        name: "Backend Engineering & System Design",
+        issuer: "Industry Experience & Project Implementation",
+        year: "2025",
+        details:
+          "Hands-on experience building scalable backend systems, authentication platforms, payment workflows, queue systems, caching layers, and cloud-native architectures.",
+      },
+    ],
+    [],
+  );
 
   // Awards & Scholarships - memoized with actual achievements
-  const awards = useMemo(() => [
-    {
-      title: "Academic Excellence Scholarship",
-      issuer: "Industrial University of Ho Chi Minh City",
-      year: "2024",
-      type: "Full Scholarship (100%)",
-      achievement: "GPA 3.75/4.0",
-      description: "Awarded full tuition scholarship for outstanding academic performance"
-    },
-    {
-      title: "Academic Excellence Scholarship", 
-      issuer: "Industrial University of Ho Chi Minh City",
-      year: "2023",
-      type: "Partial Scholarship (50%)",
-      achievement: "GPA 3.62/4.0",
-      description: "Recognized for consistent high academic achievement"
-    },
-    {
-      title: "Academic Excellence Scholarship",
-      issuer: "Industrial University of Ho Chi Minh City", 
-      year: "2022",
-      type: "Partial Scholarship (70%)",
-      achievement: "GPA 3.50/4.0",
-      description: "First-year excellence recognition in Software Engineering program"
-    }
-  ], []);
-
-
+  const awards = useMemo(
+    () => [
+      {
+        title: "Solved 200+ DSA Problems",
+        issuer: "LeetCode & Coding Platforms",
+        year: "2025",
+        type: "Problem Solving",
+        achievement: "200+ Coding Problems",
+        description:
+          "Practiced Data Structures & Algorithms consistently focusing on problem-solving, optimization, and scalable logic building.",
+      },
+      {
+        title: "Delivered 10+ Production Projects",
+        issuer: "Turbostart",
+        year: "2025",
+        type: "Professional Achievement",
+        achievement: "10+ Real-World Projects",
+        description:
+          "Successfully contributed to multiple production-grade B2B and B2C platforms including SaaS, FinOps, rental systems, identity platforms, and mobile applications.",
+      },
+      {
+        title: "Production-Grade System Architecture",
+        issuer: "Personal & Client Projects",
+        year: "2025",
+        type: "Engineering Achievement",
+        achievement: "Scalable Architecture Design",
+        description:
+          "Designed and implemented scalable backend architectures using Redis, Kafka, BullMQ, PostgreSQL, Docker, AWS S3, and cloud deployment workflows.",
+      },
+    ],
+    [],
+  );
 
   return (
     <>
@@ -164,7 +157,7 @@ function Resume() {
               </span>
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -173,23 +166,22 @@ function Resume() {
               My <span className="gradient-text">Resume</span>
             </motion.h1>
 
-            <motion.div 
+            <motion.div
               className="w-24 h-1.5 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto mb-8 rounded-full"
               initial={{ width: 0 }}
               animate={{ width: 96 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             />
 
-            <motion.p 
+            <motion.p
               className="text-xl text-neutral-400 max-w-3xl mx-auto leading-relaxed mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Download my complete resume or view it online to learn more about 
+              Download my complete resume or view it online to learn more about
               my professional experience, skills, and achievements.
             </motion.p>
-
           </div>
 
           {/* PDF Viewer */}
@@ -230,11 +222,15 @@ function Resume() {
                       onError={() => setPdfError(true)}
                       onLoad={() => setPdfError(false)}
                     />
-                    
+
                     {/* Fallback for browsers that don't support PDF viewing */}
-                    <div className={`text-center mt-4 p-4 bg-neutral-700/30 rounded-lg ${pdfError ? 'bg-red-900/20 border border-red-500/30' : ''}`}>
+                    <div
+                      className={`text-center mt-4 p-4 bg-neutral-700/30 rounded-lg ${pdfError ? "bg-red-900/20 border border-red-500/30" : ""}`}
+                    >
                       <p className="text-neutral-400 text-sm mb-3">
-                        {pdfError ? 'PDF failed to load, but you can still access it!' : "Can't see the PDF? No problem!"}
+                        {pdfError
+                          ? "PDF failed to load, but you can still access it!"
+                          : "Can't see the PDF? No problem!"}
                       </p>
                       <div className="flex gap-4 justify-center">
                         <a
@@ -284,9 +280,9 @@ function Resume() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  whileHover={{ 
+                  whileHover={{
                     y: -5,
-                    transition: { duration: 0.3 }
+                    transition: { duration: 0.3 },
                   }}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -337,38 +333,38 @@ function Resume() {
 
               <div className="flex-1">
                 {education.map((edu, index) => (
-                <motion.div
-                  key={index}
-                  className="glass-effect rounded-2xl p-6 border border-neutral-700/50"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                  viewport={{ once: true }}
-                  whileHover={{ 
-                    scale: 1.02,
-                    transition: { duration: 0.2 }
-                  }}
-                >
-                  <h3 className="text-lg font-bold text-neutral-100 mb-2">
-                    {edu.degree}
-                  </h3>
-                  <p className="text-amber-400 font-semibold mb-1">
-                    {edu.institution}
-                  </p>
-                  <div className="flex justify-between items-center text-neutral-400 text-sm mb-2">
-                    <span>{edu.period}</span>
-                    <span>{edu.location}</span>
-                  </div>
-                  <p className="text-neutral-300 font-semibold mb-3">
-                    GPA: {edu.gpa}
-                  </p>
-                  {edu.details && (
-                    <p className="text-neutral-400 text-sm leading-relaxed">
-                      {edu.details}
+                  <motion.div
+                    key={index}
+                    className="glass-effect rounded-2xl p-6 border border-neutral-700/50"
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2 }}
+                    viewport={{ once: true }}
+                    whileHover={{
+                      scale: 1.02,
+                      transition: { duration: 0.2 },
+                    }}
+                  >
+                    <h3 className="text-lg font-bold text-neutral-100 mb-2">
+                      {edu.degree}
+                    </h3>
+                    <p className="text-amber-400 font-semibold mb-1">
+                      {edu.institution}
                     </p>
-                  )}
-                </motion.div>
-              ))}
+                    <div className="flex justify-between items-center text-neutral-400 text-sm mb-2">
+                      <span>{edu.period}</span>
+                      <span>{edu.location}</span>
+                    </div>
+                    <p className="text-neutral-300 font-semibold mb-3">
+                      GPA: {edu.gpa}
+                    </p>
+                    {edu.details && (
+                      <p className="text-neutral-400 text-sm leading-relaxed">
+                        {edu.details}
+                      </p>
+                    )}
+                  </motion.div>
+                ))}
               </div>
             </div>
 
@@ -389,34 +385,34 @@ function Resume() {
               <div className="flex-1">
                 <div className="space-y-4">
                   {certifications.map((cert, index) => (
-                  <motion.div
-                    key={index}
-                    className="glass-effect rounded-xl p-6 border border-neutral-700/50"
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ 
-                      x: 5,
-                      transition: { duration: 0.2 }
-                    }}
-                  >
-                    <div className="flex items-center gap-3 mb-2">
-                      <FaAward className="text-amber-400" />
-                      <h3 className="font-bold text-neutral-100">
-                        {cert.name}
-                      </h3>
-                    </div>
-                    <p className="text-neutral-400 text-sm mb-2">
-                      {cert.issuer} • {cert.year}
-                    </p>
-                    {cert.details && (
-                      <p className="text-neutral-300 text-sm leading-relaxed">
-                        {cert.details}
+                    <motion.div
+                      key={index}
+                      className="glass-effect rounded-xl p-6 border border-neutral-700/50"
+                      initial={{ opacity: 0, x: 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      whileHover={{
+                        x: 5,
+                        transition: { duration: 0.2 },
+                      }}
+                    >
+                      <div className="flex items-center gap-3 mb-2">
+                        <FaAward className="text-amber-400" />
+                        <h3 className="font-bold text-neutral-100">
+                          {cert.name}
+                        </h3>
+                      </div>
+                      <p className="text-neutral-400 text-sm mb-2">
+                        {cert.issuer} • {cert.year}
                       </p>
-                    )}
-                  </motion.div>
-                ))}
+                      {cert.details && (
+                        <p className="text-neutral-300 text-sm leading-relaxed">
+                          {cert.details}
+                        </p>
+                      )}
+                    </motion.div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -444,14 +440,14 @@ function Resume() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.02,
-                      transition: { duration: 0.2 }
+                      transition: { duration: 0.2 },
                     }}
                   >
                     {/* Award background gradient */}
                     <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-yellow-500/5 rounded-xl"></div>
-                    
+
                     <div className="relative">
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-3">
@@ -471,16 +467,18 @@ function Resume() {
                           {award.year}
                         </span>
                       </div>
-                      
+
                       <div className="mb-3">
                         <p className="text-neutral-300 text-sm mb-1">
-                          <span className="font-medium">Institution:</span> {award.issuer}
+                          <span className="font-medium">Institution:</span>{" "}
+                          {award.issuer}
                         </p>
                         <p className="text-amber-400 text-sm font-medium">
-                          <span className="text-neutral-300">Achievement:</span> {award.achievement}
+                          <span className="text-neutral-300">Achievement:</span>{" "}
+                          {award.achievement}
                         </p>
                       </div>
-                      
+
                       <p className="text-neutral-400 text-sm leading-relaxed">
                         {award.description}
                       </p>
@@ -514,8 +512,9 @@ function Resume() {
             </h3>
 
             <p className="text-neutral-400 text-lg mb-8 max-w-2xl mx-auto">
-              Download my full resume for detailed information about my experience, 
-              projects, and technical skills. Let's build something amazing together!
+              Download my full resume for detailed information about my
+              experience, projects, and technical skills. Let's build something
+              amazing together!
             </p>
 
             <motion.button
@@ -535,7 +534,7 @@ function Resume() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default Resume
+export default Resume;

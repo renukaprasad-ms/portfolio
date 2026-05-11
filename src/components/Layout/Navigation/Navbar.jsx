@@ -127,10 +127,10 @@ function Navbar() {
               </div>
               <div className="hidden sm:flex flex-col relative">
                 <span className="text-base font-bold text-neutral-100 tracking-tight leading-tight">
-                  Gia Si
+                  Renuka Prasad
                 </span>
                 <span className="text-[10px] text-neutral-500 font-medium tracking-wider uppercase">
-                  Developer
+                  Software Engineer
                 </span>
               </div>
             </button>

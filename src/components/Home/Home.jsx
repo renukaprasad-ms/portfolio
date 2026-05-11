@@ -19,6 +19,7 @@ import {
   SiMongodb,
   SiRedis,
   SiNextdotjs,
+  SiPython,
 } from "react-icons/si";
 
 // Lazy load gsap for desktop animations
@@ -72,6 +73,7 @@ function TechMarquee() {
     { icon: SiMongodb, name: "MongoDB", color: "text-green-400" },
     { icon: SiRedis, name: "Redis", color: "text-red-500" },
     { icon: SiDocker, name: "Docker", color: "text-blue-400" },
+    { icon: SiPython, name: "Python", color: "text-yellow-400" },
   ];
 
   // Duplicate for seamless loop
@@ -216,11 +218,11 @@ function Home() {
             {/* Name */}
             <h1 className="hero-element">
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.08] tracking-tight">
-                <span className="text-neutral-50">Nguyen Tran</span>
+                <span className="text-neutral-50">Renuka Prasad</span>
                 <br />
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-                    Gia Si
+                    M S
                   </span>
                 </span>
               </span>
@@ -231,10 +233,12 @@ function Home() {
               <span className="text-xl md:text-2xl font-semibold text-neutral-300">
                 <TypeWriter
                   texts={[
-                    "Java Backend Developer",
-                    "Spring Boot Specialist",
-                    "Full Stack Engineer",
-                    "Team Leader",
+                    "Software Engineer",
+                    "Backend Engineer",
+                    "Full Stack Developer",
+                    "Scalable Systems Builder",
+                    "Java & Spring Boot Developer",
+                    "System Design Enthusiast",
                   ]}
                   delay={isMobile ? 100 : 80}
                   deleteDelay={isMobile ? 50 : 30}
@@ -243,17 +247,21 @@ function Home() {
             </div>
 
             {/* Description */}
-            <p className="hero-element text-neutral-400 text-base md:text-lg leading-relaxed max-w-xl">
-              Final-year{" "}
+            <p className="hero-element text-neutral-400 text-base md:text-lg leading-relaxed max-w-2xl">
+              Results-driven{" "}
               <span className="text-amber-400 font-semibold">
-                Software Engineering
+                Software Engineer
               </span>{" "}
-              student building scalable systems with{" "}
+              with 1+ year of experience building scalable{" "}
               <span className="text-amber-400 font-semibold">
-                Java, Spring Boot & React
+                full-stack and backend systems
               </span>
-              . Leading teams to ship real-world products — from e-commerce
-              platforms to real-time messaging apps.
+              . Delivered 10+ production-grade client projects using{" "}
+              <span className="text-amber-400 font-semibold">
+                Java, Spring Boot, React, Node.js & PostgreSQL
+              </span>
+              , with strong focus on REST APIs, system design, cloud
+              technologies, and high-performance architectures.
             </p>
 
             {/* CTA row */}
@@ -285,7 +293,7 @@ function Home() {
             {/* Social links */}
             <div className="hero-element flex gap-3 pt-1">
               <a
-                href="https://github.com/giasinguyen"
+                href="https://github.com/renukaprasad-ms"
                 target="_blank"
                 rel="noreferrer"
                 className="p-3 text-neutral-500 hover:text-amber-400 bg-neutral-900/50 hover:bg-neutral-800/80 border border-neutral-800/50 hover:border-amber-500/30 rounded-xl transition-all duration-300"
@@ -294,7 +302,7 @@ function Home() {
                 <FaGithub className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com/in/giasinguyen"
+                href="https://www.linkedin.com/in/renuka-prasad-m-s/"
                 target="_blank"
                 rel="noreferrer"
                 className="p-3 text-neutral-500 hover:text-amber-400 bg-neutral-900/50 hover:bg-neutral-800/80 border border-neutral-800/50 hover:border-amber-500/30 rounded-xl transition-all duration-300"
@@ -318,7 +326,7 @@ function Home() {
                   <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
                   <span className="w-3 h-3 rounded-full bg-green-500/80" />
                   <span className="ml-3 text-xs text-neutral-600 font-mono">
-                    ~/giasi-dev
+                    ~/renukaprasad-dev
                   </span>
                 </div>
 
@@ -327,20 +335,22 @@ function Home() {
                   <div>
                     <span className="text-amber-500">$</span>{" "}
                     <span className="text-neutral-400">whoami</span>
-                    <p className="text-green-400 mt-1 pl-4">Gia Si Nguyen</p>
+                    <p className="text-green-400 mt-1 pl-4">
+                      Renuka Prasad M S
+                    </p>
                   </div>
                   <div>
                     <span className="text-amber-500">$</span>{" "}
                     <span className="text-neutral-400">cat role.txt</span>
                     <p className="text-cyan-400 mt-1 pl-4">
-                      Full Stack Developer
+                      Software Engineer & Backend Developer
                     </p>
                   </div>
                   <div>
                     <span className="text-amber-500">$</span>{" "}
                     <span className="text-neutral-400">cat focus.txt</span>
                     <p className="text-amber-300 mt-1 pl-4">
-                      Java · Spring Boot · React
+                      Java · Python · Spring Boot · React · Node.js · PostgreSQL
                     </p>
                   </div>
                   <div>
@@ -376,10 +386,9 @@ function Home() {
         {/* ══════════ STATS BAR ══════════ */}
         <div className="hero-element">
           <div className="flex flex-wrap justify-center gap-2 md:gap-0 md:divide-x divide-neutral-800 bg-neutral-900/50 border border-neutral-800/60 rounded-2xl backdrop-blur-sm py-2">
-            <StatCard value="8" label="Projects" />
-            <StatCard value="4" label="Team Projects" />
-            <StatCard value="10" label="Technologies" />
-            <StatCard value="3.48" label="GPA" suffix="/4.0" />
+            <StatCard value="15" label="Projects" />
+            <StatCard value="10" label="Team Projects" />
+            <StatCard value="8" label="Technologies" />
           </div>
         </div>
 
