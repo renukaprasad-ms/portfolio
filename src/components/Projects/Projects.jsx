@@ -115,6 +115,8 @@ function Projects() {
 // Clean Project Card Component
 function ProjectCard({ project, index }) {
   const [imageError, setImageError] = useState(false)
+  const githubUrl = project.githubUrl?.trim()
+  const demoUrl = project.demoUrl?.trim()
 
   return (
     <motion.article
@@ -145,12 +147,12 @@ function ProjectCard({ project, index }) {
         <div className="flex flex-col md:flex-row">
           {/* Image Section */}
           <div className="md:w-72 lg:w-80 flex-shrink-0">
-            <div className="relative h-48 md:h-full overflow-hidden bg-neutral-800/50">
+            <div className="relative h-48 md:h-full overflow-hidden bg-neutral-800/50 p-4">
               {!imageError ? (
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   onError={() => setImageError(true)}
                   loading="lazy"
                 />
@@ -195,7 +197,7 @@ function ProjectCard({ project, index }) {
 
             {/* Tech Tags */}
             <div className="flex flex-wrap gap-2 mb-5">
-              {project.tags.slice(0, 6).map((tag, i) => (
+              {project.tags.map((tag, i) => (
                 <span
                   key={i}
                   className="px-2.5 py-1 text-xs font-medium bg-neutral-800/80 text-neutral-300 rounded-lg border border-neutral-700/50"
@@ -203,27 +205,24 @@ function ProjectCard({ project, index }) {
                   {tag}
                 </span>
               ))}
-              {project.tags.length > 6 && (
-                <span className="px-2.5 py-1 text-xs font-medium text-neutral-500">
-                  +{project.tags.length - 6} more
-                </span>
-              )}
             </div>
 
             {/* Action Buttons */}
             <div className="flex items-center gap-3">
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white border border-neutral-700/50 hover:border-neutral-600 text-sm font-medium transition-all duration-300"
-              >
-                <FaGithub className="w-4 h-4" />
-                <span>Source</span>
-              </a>
-              {project.demoUrl && project.demoUrl !== project.githubUrl && (
+              {githubUrl && (
                 <a
-                  href={project.demoUrl}
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white border border-neutral-700/50 hover:border-neutral-600 text-sm font-medium transition-all duration-300"
+                >
+                  <FaGithub className="w-4 h-4" />
+                  <span>Source</span>
+                </a>
+              )}
+              {demoUrl && demoUrl !== githubUrl && (
+                <a
+                  href={demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-neutral-900 text-sm font-medium transition-all duration-300 shadow-lg shadow-amber-500/15 hover:shadow-amber-500/25"

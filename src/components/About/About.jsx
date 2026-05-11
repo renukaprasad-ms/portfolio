@@ -82,7 +82,7 @@ function About() {
               <div className="w-56 h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-neutral-800 bg-neutral-900">
                 <img
                   src="/avatar.jpg"
-                  alt="Nguyen Tran Gia Si"
+                  alt="Renuka Prasad M S"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

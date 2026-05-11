@@ -10,12 +10,12 @@ import {
   FaCheckCircle,
   FaTimes,
   FaExternalLinkAlt,
-  FaSpinner
+  FaSpinner,
 } from "react-icons/fa";
-import SEOHead from '../SEO/SEOHead'
-import { SEO_CONFIGS } from '../SEO/seoConfigs'
+import SEOHead from "../SEO/SEOHead";
+import { SEO_CONFIGS } from "../SEO/seoConfigs";
 
-const WEB3FORMS_ACCESS_KEY = "110d43b6-1f58-4df5-a1bb-1363142e734b";
+const WEB3FORMS_ACCESS_KEY = "cf570971-7bf8-447d-9ce7-ba34fd6d3e23";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -33,87 +33,107 @@ function Contact() {
 
   const handleInputChange = useCallback((e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   }, []);
 
   // Real email submission using Web3Forms
-  const handleSubmit = useCallback(async (e) => {
-    e.preventDefault();
-    
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      showToast("error", "Please fill in all fields");
-      return;
-    }
+  const handleSubmit = useCallback(
+    async (e) => {
+      e.preventDefault();
 
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          subject: `Portfolio Contact: Message from ${formData.name}`,
-          from_name: "GiaSi Portfolio"
-        })
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        showToast("success", "Message sent successfully! I'll get back to you soon.");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        throw new Error(result.message || "Failed to send message");
+      if (
+        !formData.name.trim() ||
+        !formData.email.trim() ||
+        !formData.message.trim()
+      ) {
+        showToast("error", "Please fill in all fields");
+        return;
       }
-    } catch (error) {
-      console.error("Form submission error:", error);
-      showToast("error", "Failed to send message. Please try again or contact me directly.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, [formData, showToast]);
+
+      setIsSubmitting(true);
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            subject: `Portfolio Contact: Message from ${formData.name}`,
+            from_name: "GiaSi Portfolio",
+          }),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showToast(
+            "success",
+            "Message sent successfully! I'll get back to you soon.",
+          );
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          throw new Error(result.message || "Failed to send message");
+        }
+      } catch (error) {
+        console.error("Form submission error:", error);
+        showToast(
+          "error",
+          "Failed to send message. Please try again or contact me directly.",
+        );
+      } finally {
+        setIsSubmitting(false);
+      }
+    },
+    [formData, showToast],
+  );
 
   // Direct contact methods
   const contactMethods = [
     {
       icon: FaEnvelope,
       label: "Email",
-      value: "giasinguyentran@gmail.com",
-      href: "mailto:giasinguyentran@gmail.com",
+      value: "renukaprasadms00@gmail.com",
+      href: "mailto:renukaprasadms00@gmail.com",
     },
     {
       icon: FaPhone,
       label: "Phone",
-      value: "(+84) 34 899 6487",
-      href: "tel:+84348996487",
+      value: "(+91) 7022129610",
+      href: "tel:+917022129610",
     },
     {
       icon: FaMapMarkerAlt,
       label: "Location",
-      value: "Ho Chi Minh City, Vietnam",
-      href: "https://maps.google.com/?q=Ho+Chi+Minh+City",
-    }
+      value: "Bengaluru, India",
+      href: "https://maps.google.com/?q=Bengaluru,India",
+    },
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: "https://github.com/giasinguyen", label: "GitHub" },
-    { icon: FaLinkedin, href: "https://linkedin.com/in/giasinguyen", label: "LinkedIn" }
+    {
+      icon: FaGithub,
+      href: "https://github.com/renukaprasad-ms",
+      label: "GitHub",
+    },
+    {
+      icon: FaLinkedin,
+      href: "https://www.linkedin.com/in/renuka-prasad-m-s/",
+      label: "LinkedIn",
+    },
   ];
 
   return (
     <>
       <SEOHead config={SEO_CONFIGS.contact} />
-      
+
       <section className="section-padding pt-28 pb-20">
         <div className="max-w-5xl mx-auto">
-          
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -123,19 +143,19 @@ function Contact() {
             <span className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
               Available for opportunities
             </span>
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 mb-4">
               Get In Touch
             </h1>
-            
+
             <p className="text-neutral-400 text-lg max-w-xl mx-auto">
-              Looking for a Java Backend Developer? Let's connect and discuss how I can contribute to your team.
+              Looking for a Java Backend Developer? Let's connect and discuss
+              how I can contribute to your team.
             </p>
           </motion.div>
 
           {/* Main Content Grid */}
           <div className="grid lg:grid-cols-5 gap-8">
-            
             {/* Contact Form - Takes 3 columns */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -159,7 +179,7 @@ function Contact() {
                       value={formData.name}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 rounded-xl bg-neutral-800/50 border border-neutral-700 text-neutral-100 placeholder-neutral-500 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 transition-all"
-                      placeholder="Nguyễn Trần Gia Sĩ"
+                      placeholder="Renuka Prasad M S"
                       required
                     />
                   </div>
@@ -174,7 +194,7 @@ function Contact() {
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 rounded-xl bg-neutral-800/50 border border-neutral-700 text-neutral-100 placeholder-neutral-500 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 transition-all"
-                      placeholder="giasinguyentran@gmail.com"
+                      placeholder="renukaprasadms00@gmail.com"
                       required
                     />
                   </div>
@@ -231,7 +251,7 @@ function Contact() {
                 <h2 className="text-lg font-semibold text-neutral-100 mb-5">
                   Direct Contact
                 </h2>
-                
+
                 <div className="space-y-4">
                   {contactMethods.map((method, index) => {
                     const Icon = method.icon;
@@ -239,16 +259,26 @@ function Contact() {
                       <a
                         key={index}
                         href={method.href}
-                        target={method.href.startsWith('http') ? '_blank' : undefined}
-                        rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        target={
+                          method.href.startsWith("http") ? "_blank" : undefined
+                        }
+                        rel={
+                          method.href.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                         className="flex items-center gap-4 p-4 rounded-xl bg-neutral-800/40 hover:bg-neutral-800/70 border border-neutral-700/50 hover:border-amber-500/30 transition-all duration-300 group"
                       >
                         <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 group-hover:bg-amber-500/20 transition-colors">
                           <Icon className="text-lg" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs text-neutral-500 mb-0.5">{method.label}</p>
-                          <p className="text-sm text-neutral-200 truncate">{method.value}</p>
+                          <p className="text-xs text-neutral-500 mb-0.5">
+                            {method.label}
+                          </p>
+                          <p className="text-sm text-neutral-200 truncate">
+                            {method.value}
+                          </p>
                         </div>
                         <FaExternalLinkAlt className="text-xs text-neutral-500 group-hover:text-amber-400 transition-colors" />
                       </a>
@@ -262,7 +292,7 @@ function Contact() {
                 <h2 className="text-lg font-semibold text-neutral-100 mb-5">
                   Connect Online
                 </h2>
-                
+
                 <div className="flex gap-3">
                   {socialLinks.map((social, index) => {
                     const Icon = social.icon;
@@ -276,7 +306,9 @@ function Contact() {
                         aria-label={social.label}
                       >
                         <Icon className="text-xl" />
-                        <span className="text-sm font-medium">{social.label}</span>
+                        <span className="text-sm font-medium">
+                          {social.label}
+                        </span>
                       </a>
                     );
                   })}
@@ -290,10 +322,15 @@ function Contact() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                   </span>
-                  <span className="text-sm font-semibold text-amber-400">Open to Work</span>
+                  <span className="text-sm font-semibold text-amber-400">
+                    Open to Work
+                  </span>
                 </div>
                 <p className="text-sm text-neutral-400 leading-relaxed">
-                  Currently seeking internship opportunities as a Java Backend Developer. Available to start immediately.
+                  Currently seeking Software Development Engineer, Backend
+                  Engineer, and Full-Stack Developer opportunities to build
+                  scalable, production-grade applications and contribute to
+                  high-impact engineering teams.
                 </p>
               </div>
             </motion.div>
@@ -309,12 +346,14 @@ function Contact() {
               exit={{ opacity: 0, y: 50 }}
               className="fixed bottom-6 right-6 z-50"
             >
-              <div className={`px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 ${
-                toast.type === 'success' 
-                  ? 'bg-green-500/90 text-white' 
-                  : 'bg-red-500/90 text-white'
-              }`}>
-                {toast.type === 'success' ? (
+              <div
+                className={`px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 ${
+                  toast.type === "success"
+                    ? "bg-green-500/90 text-white"
+                    : "bg-red-500/90 text-white"
+                }`}
+              >
+                {toast.type === "success" ? (
                   <FaCheckCircle className="text-lg" />
                 ) : (
                   <FaTimes className="text-lg" />

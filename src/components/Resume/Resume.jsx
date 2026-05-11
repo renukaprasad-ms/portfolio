@@ -31,8 +31,8 @@ function Resume() {
 
   const handleDownloadPDF = useCallback(() => {
     const link = document.createElement("a");
-    link.href = "/documents/NguyenTranGiaSi_Intern_Backend_Developer.pdf";
-    link.download = "NguyenTranGiaSi_Intern_Backend_Developer.pdf";
+    link.href = "/documents/Renuka_Prasad_M_S_Resume.pdf";
+    link.download = "Renuka_Prasad_M_S_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -234,7 +234,7 @@ function Resume() {
                       </p>
                       <div className="flex gap-4 justify-center">
                         <a
-                          href="/documents/NguyenTranGiaSi_Intern_JAVA_Backend.pdf"
+                          href="/documents/Renuka_Prasad_M_S_Resume.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-neutral-900 font-medium px-4 py-2 rounded-lg text-sm transition-colors duration-300"
