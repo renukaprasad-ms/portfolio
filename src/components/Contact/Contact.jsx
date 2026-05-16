@@ -130,7 +130,7 @@ function Contact() {
 
   return (
     <>
-      <SEOHead config={SEO_CONFIGS.contact} />
+      <SEOHead {...SEO_CONFIGS.contact} />
 
       <section className="section-padding pt-28 pb-20">
         <div className="max-w-5xl mx-auto">
