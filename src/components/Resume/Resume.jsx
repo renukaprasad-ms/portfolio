@@ -42,19 +42,30 @@ function Resume() {
   const experiences = useMemo(
     () => [
       {
+        title: "Software Development Engineer I (Java Full-Stack Developer)",
+        company: "GenceeSoft Innovations",
+        period: "06/2026 - Present",
+        location: "Hyderabad, India",
+        achievements: [
+          "Leading an engineering team building BliQ, an enterprise-grade multi-tenant messaging platform using Java, Spring Boot, React, Redis, RabbitMQ, MySQL, and MongoDB",
+          "Developing scalable WhatsApp, SMS, real-time chat, broadcast campaign, billing, VoIP, and Google Contacts synchronization features",
+          "Optimized queue-based broadcast processing through batching and database-query reduction to support large-volume and concurrent campaigns",
+          "Designed secure authentication, WebSocket event flows, billing workflows, and integrations across distributed microservices",
+          "Driving technical planning, task allocation, code reviews, debugging, testing, and end-to-end delivery of production features",
+        ],
+      },
+      {
         title: "Software Engineer",
         company: "Turbostart",
-        period: "03/2025 - Present",
+        period: "03/2025 - 05/2026",
         location: "Bangalore, India",
         achievements: [
-          "Worked as a Full-Stack Engineer across scalable web and mobile applications for real-world B2B and B2C products",
-          "Delivered 10+ client projects end-to-end, contributing to backend systems, APIs, frontend development, deployment, and production delivery",
-          "Designed and developed scalable backend architectures, REST APIs, authentication systems, payment integrations, and business workflows",
-          "Built responsive and high-performance user interfaces using React.js, Next.js, and modern frontend technologies",
-          "Worked on cloud deployment, database design, Redis caching, queue-based processing, and system optimization to improve scalability and reliability",
-          "Collaborated directly with clients and cross-functional teams to deliver production-grade applications and features on time",
-          "Applied strong Data Structures & Algorithms and system design fundamentals to build efficient and maintainable solutions",
-          "Contributed to enterprise-grade projects including Techflu (Rental Platform), Cloudverse (FinOps Platform), AuraML (Multi-Tenant SaaS), mobile applications, and reusable authentication platforms",
+          "Worked as a Full Stack Engineer across scalable web and mobile applications for multiple B2B and B2C client products",
+          "Delivered 10+ production-grade client projects end-to-end, contributing to backend services, REST APIs, frontend systems, deployment pipelines, and production releases",
+          "Designed and developed scalable backend architectures, authentication systems, business workflows, and payment integrations using Java Spring Boot, Node.js, PostgreSQL, and Redis",
+          "Built responsive and high-performance frontend applications using React.js and modern JavaScript frameworks",
+          "Worked on caching strategies, database optimization, cloud deployments, reverse proxy configuration, and containerized environments using Docker and Nginx",
+          "Collaborated directly with clients, designers, and cross-functional engineering teams to deliver production-ready features within deadlines",
         ],
       },
     ],
@@ -98,7 +109,7 @@ function Resume() {
         issuer: "Industry Experience & Project Implementation",
         year: "2025",
         details:
-          "Hands-on experience building scalable backend systems, authentication platforms, payment workflows, queue systems, caching layers, and cloud-native architectures.",
+          "Hands-on experience building scalable backend systems, authentication platforms, payment workflows, queue systems, caching layers, WebSocket flows, and cloud-native architectures.",
       },
     ],
     [],
@@ -132,7 +143,7 @@ function Resume() {
         type: "Engineering Achievement",
         achievement: "Scalable Architecture Design",
         description:
-          "Designed and implemented scalable backend architectures using Redis, Kafka, BullMQ, PostgreSQL, Docker, AWS S3, and cloud deployment workflows.",
+          "Designed and implemented scalable backend architectures using Redis, RabbitMQ, BullMQ, PostgreSQL, Docker, AWS S3, and cloud deployment workflows.",
       },
     ],
     [],
@@ -201,7 +212,7 @@ function Resume() {
                         Resume Preview
                       </h3>
                       <p className="text-neutral-400 text-sm mt-1">
-                        NguyenTranGiaSi_Intern_JAVA_Backend.pdf
+                        Renuka_Prasad_M_S_Resume.pdf
                       </p>
                     </div>
                     <motion.button
@@ -215,7 +226,7 @@ function Resume() {
                   </div>
                   <div className="bg-neutral-800/50 rounded-xl p-4">
                     <iframe
-                      src="/documents/NguyenTranGiaSi_Intern_JAVA_Backend.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH"
+                      src="/documents/Renuka_Prasad_M_S_Resume.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH"
                       className="w-full h-[600px] rounded-lg border border-neutral-700/30"
                       title="Resume PDF"
                       loading="lazy"

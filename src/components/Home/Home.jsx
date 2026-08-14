@@ -234,9 +234,9 @@ function Home() {
                 <TypeWriter
                   texts={[
                     "Software Engineer",
-                    "Backend Engineer",
+                    "Java Backend Engineer",
                     "Full Stack Developer",
-                    "Scalable Systems Builder",
+                    "Messaging Platform Builder",
                     "Java & Spring Boot Developer",
                     "System Design Enthusiast",
                   ]}
@@ -258,10 +258,10 @@ function Home() {
               </span>
               . Delivered 10+ production-grade client projects using{" "}
               <span className="text-amber-400 font-semibold">
-                Java, Spring Boot, React, Node.js & PostgreSQL
+                Java, Spring Boot, React, Node.js, MySQL & PostgreSQL
               </span>
-              , with strong focus on REST APIs, system design, cloud
-              technologies, and high-performance architectures.
+              , with strong focus on microservices, REST APIs, WebSockets,
+              queues, system design, and high-performance architectures.
             </p>
 
             {/* CTA row */}
@@ -350,7 +350,7 @@ function Home() {
                     <span className="text-amber-500">$</span>{" "}
                     <span className="text-neutral-400">cat focus.txt</span>
                     <p className="text-amber-300 mt-1 pl-4">
-                      Java · Python · Spring Boot · React · Node.js · PostgreSQL
+                      Java - Spring Boot - React - Redis - RabbitMQ - MySQL
                     </p>
                   </div>
                   <div>
@@ -386,9 +386,9 @@ function Home() {
         {/* ══════════ STATS BAR ══════════ */}
         <div className="hero-element">
           <div className="flex flex-wrap justify-center gap-2 md:gap-0 md:divide-x divide-neutral-800 bg-neutral-900/50 border border-neutral-800/60 rounded-2xl backdrop-blur-sm py-2">
-            <StatCard value="15" label="Projects" />
+            <StatCard value="10" label="Projects" />
             <StatCard value="10" label="Team Projects" />
-            <StatCard value="8" label="Technologies" />
+            <StatCard value="12" label="Technologies" />
           </div>
         </div>
 

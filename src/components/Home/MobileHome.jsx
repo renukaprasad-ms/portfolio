@@ -47,10 +47,10 @@ const MobileHome = memo(() => {
           <div>
             <p className="text-neutral-500 text-sm font-medium mb-2">Hi there, I'm —</p>
             <h1 className="text-4xl font-black leading-tight">
-              <span className="text-neutral-50">Nguyen Tran</span>
+              <span className="text-neutral-50">Renuka Prasad</span>
               <br />
               <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-                Gia Si
+                M S
               </span>
             </h1>
           </div>
@@ -71,9 +71,8 @@ const MobileHome = memo(() => {
 
           {/* Description */}
           <p className="text-neutral-400 text-sm leading-relaxed max-w-md">
-            Final-year{" "}
-            <span className="text-amber-400 font-semibold">Software Engineering</span>{" "}
-            student building scalable systems with{" "}
+            Backend-focused Software Engineer with 1+ year of experience
+            building scalable B2B and B2C systems with{" "}
             <span className="text-amber-400 font-semibold">Java, Spring Boot & React</span>.
           </p>
 
@@ -98,7 +97,7 @@ const MobileHome = memo(() => {
           {/* Social */}
           <div className="flex gap-3">
             <a
-              href="https://github.com/giasinguyen"
+              href="https://github.com/renukaprasad-ms"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 text-neutral-500 hover:text-amber-400 bg-neutral-900/50 border border-neutral-800/50 rounded-xl transition-colors"
@@ -107,7 +106,7 @@ const MobileHome = memo(() => {
               <FaGithub size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/giasinguyen"
+              href="https://www.linkedin.com/in/renuka-prasad-m-s/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 text-neutral-500 hover:text-amber-400 bg-neutral-900/50 border border-neutral-800/50 rounded-xl transition-colors"
@@ -120,9 +119,9 @@ const MobileHome = memo(() => {
           {/* Stats row */}
           <div className="flex gap-0 divide-x divide-neutral-800 bg-neutral-900/50 border border-neutral-800/60 rounded-xl py-2 mt-2">
             {[
-              { v: "8+", l: "Projects" },
-              { v: "4+", l: "Teams" },
-              { v: "10+", l: "Tech" },
+              { v: "10+", l: "Projects" },
+              { v: "3", l: "Team Led" },
+              { v: "12+", l: "Tech" },
             ].map((s) => (
               <div key={s.l} className="flex-1 text-center px-2">
                 <span className="block text-lg font-black text-amber-400">{s.v}</span>

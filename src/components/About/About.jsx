@@ -36,7 +36,7 @@ function About() {
     {
       icon: <FaServer />,
       title: "Backend & Systems",
-      description: "REST APIs, system design, caching & cloud architectures",
+      description: "Microservices, queues, WebSockets & cloud architectures",
     },
     {
       icon: <FaGraduationCap />,
@@ -127,26 +127,25 @@ function About() {
                 I'm a results-driven{" "}
                 <span className="text-neutral-200">Software Engineer</span> with
                 experience building scalable full-stack and backend systems for
-                real-world products. I specialize in{" "}
+                real-world B2B and B2C products. I specialize in{" "}
                 <span className="text-amber-400">
-                  Java, Spring Boot, React, Node.js & PostgreSQL
+                  Java, Spring Boot, React, Node.js, MySQL & PostgreSQL
                 </span>
                 , focusing on REST APIs, scalable architectures, and
                 high-performance applications.
               </p>
 
               <p>
-                At <span className="text-neutral-200">Turbostart</span>, I
-                contributed to 10+ production-grade client projects across web
-                and mobile platforms, working on backend systems, cloud
-                deployment, authentication, payment integrations, caching, and
-                system optimization.
+                At <span className="text-neutral-200">GenceeSoft Innovations</span>, I
+                lead engineering work on BliQ, an enterprise-grade multi-tenant
+                messaging platform with WhatsApp, SMS, VoIP, real-time chat,
+                broadcasts, billing, queues, and WebSocket-driven workflows.
               </p>
 
               <p>
                 I'm passionate about{" "}
                 <span className="text-amber-400">
-                  system design, scalable engineering, and clean architecture
+                  system design, scalable engineering, distributed systems, and clean architecture
                 </span>
                 , continuously learning new technologies to build reliable and
                 impactful software solutions.

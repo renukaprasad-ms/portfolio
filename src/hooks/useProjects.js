@@ -50,7 +50,8 @@ export const getProjectCategories = (projects) => {
   const categoryLabels = {
     fullstack: 'Full Stack',
     frontend: 'Frontend',
-    backend: 'Backend'
+    backend: 'Backend',
+    mobile: 'Mobile'
   };
 
   Object.entries(categoriesMap).forEach(([category, count]) => {

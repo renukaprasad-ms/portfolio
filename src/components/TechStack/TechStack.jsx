@@ -485,6 +485,22 @@ function TechStack() {
   () => [
     {
       id: 1,
+      name: "BliQ Messaging Platform",
+      description:
+        "Enterprise-grade multi-tenant communication platform for WhatsApp, SMS, VoIP, chat, broadcasts, billing, and usage management.",
+      techUsed: [
+        "Java",
+        "Spring Boot",
+        "React",
+        "Redis",
+        "RabbitMQ",
+        "WebSockets",
+      ],
+      highlight:
+        "Led a three-member team and optimized queue-based broadcast processing for high-volume concurrent campaigns.",
+    },
+    {
+      id: 2,
       name: "Techflu – Tech Rental Platform",
       description:
         "Production-grade B2B & B2C rental platform with user, admin, and delivery partner panels.",
@@ -500,7 +516,7 @@ function TechStack() {
         "Built scalable order management, KYC verification, payment automation, and delivery tracking workflows.",
     },
     {
-      id: 2,
+      id: 3,
       name: "Reusable Multi-Tenant IDP",
       description:
         "Centralized authentication and identity provider platform with scalable multi-tenant architecture.",
@@ -509,14 +525,14 @@ function TechStack() {
         "Spring Boot",
         "PostgreSQL",
         "Redis",
-        "Kafka",
+        "JWT",
         "React.js",
       ],
       highlight:
         "Implemented RBAC, OTP authentication, tenant-based access control, and scalable auth workflows.",
     },
     {
-      id: 3,
+      id: 4,
       name: "Self-Hosted Home Server Platform",
       description:
         "Personal cloud infrastructure platform hosted on a self-managed home server environment.",
@@ -532,7 +548,7 @@ function TechStack() {
         "Built a complete self-hosted deployment ecosystem with reverse proxy routing, object storage, and secure public access.",
     },
     {
-      id: 4,
+      id: 5,
       name: "Cloudverse – FinOps Platform",
       description:
         "Cloud cost management and chargeback platform for enterprise infrastructure analytics.",
