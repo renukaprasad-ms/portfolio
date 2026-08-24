@@ -2,21 +2,21 @@
   {
     "id": 15,
     "title": "BliQ Messaging Platform",
-    "description": "Enterprise-grade multi-tenant communication platform supporting WhatsApp, SMS, VoIP, real-time chat, broadcast campaigns, contact synchronization, billing, and usage management. Led a three-member engineering team across architecture, development, code reviews, testing, and production delivery. Built scalable inbound and outbound messaging workflows for media, reactions, read receipts, interactive messages, and delivery-status tracking. Optimized queue-based broadcast processing with batching and database-query reduction for large-volume concurrent campaigns, while developing billing, authentication, Google Contacts synchronization, WebSocket events, and phone-level VoIP configuration features.",
+    "description": "Enterprise multi-tenant communications platform supporting SMS, WhatsApp, VoIP, real-time chat, broadcast campaigns, contact synchronization, billing, and usage management. Contributed across messaging workflows, authentication, billing, Google Contacts synchronization, WebSocket events, broadcast processing, and VoIP configuration. Improved large-volume messaging workflows using queue-based processing, batching, and database-query optimization.",
     "image": "/logo.png",
     "tags": ["Java", "Spring Boot", "React", "MySQL", "MongoDB", "Redis", "RabbitMQ", "WebSockets", "Docker", "REST APIs", "Microservices", "Multi-Tenant Architecture"],
     "category": "fullstack",
     "githubUrl": "",
     "demoUrl": "",
     "period": "June 2026 - Present",
-    "role": "Software Development Engineer I & Team Lead",
+    "role": "Software Development Engineer I",
     "teamSize": 3,
     "featured": true
   },
   {
     "id": 9,
     "title": "Techflu - Tech Rental Platform (B2B & B2C)",
-    "description": "Tech rental platform supporting individual customers and enterprise bulk rental operations. Developed scalable backend services using NestJS, PostgreSQL, Redis, queues, and cron jobs for inventory reservations and rental workflows. Implemented booking systems, Razorpay AutoPay integrations, order management, and real-time inventory tracking. Built admin and delivery partner management systems for order tracking, KYC approvals, delivery workflows, and operational operations. Integrated Digio Aadhaar verification and Amazon S3 storage for secure proof and document management, plus discount systems, promo codes, and scalable order-processing pipelines.",
+    "description": "Production B2B and B2C technology rental platform with inventory reservations, bookings, recurring payments, KYC, order management, and delivery workflows. Developed backend and full-stack features for inventory, Razorpay AutoPay, order processing, KYC approvals, delivery operations, discounts, and promo codes. Used Redis, BullMQ, and scheduled jobs to support reliable asynchronous rental workflows.",
     "image": "/techflu.webp",
     "tags": ["NestJS", "Next.js", "PostgreSQL", "Redis", "BullMQ", "Docker", "Razorpay", "Amazon S3", "Digio", "Cron Jobs", "REST APIs"],
     "category": "fullstack",
@@ -30,7 +30,7 @@
   {
     "id": 14,
     "title": "Reusable Multi-Tenant Identity Platform (IDP)",
-    "description": "Developed a scalable multi-tenant Identity Provider supporting JWT authentication, OTP login, Google OAuth, and role-based access control. Designed centralized authentication architecture with reusable APIs and user management features using Java Spring Boot, PostgreSQL, and React.js. Focused on tenant isolation, secure token workflows, authorization boundaries, and reusable identity services for SaaS applications.",
+    "description": "Designed a reusable multi-tenant identity provider supporting JWT authentication, OTP login, Google OAuth, role-based access control, and tenant isolation. Built centralized authentication APIs and user-management workflows with secure token handling and authorization boundaries for SaaS applications.",
     "image": "/idp.jpg",
     "tags": ["Java", "Spring Boot", "PostgreSQL", "React.js", "JWT", "OTP", "Google OAuth", "RBAC", "Authentication", "Authorization", "Identity Provider", "Multi-Tenant Architecture", "REST APIs", "System Design"],
     "category": "backend",
@@ -44,7 +44,7 @@
   {
     "id": 10,
     "title": "Self-Hosted Home Server Platform",
-    "description": "Built a personal self-hosted cloud infrastructure platform using an old laptop as a dedicated home server to deploy and manage full-stack applications and backend services. Designed a production-style hosting environment with Docker-based containerized deployments, Nginx reverse proxy routing, Cloudflare secure public access, and MinIO S3-compatible object storage. Implemented backend deployment pipelines with environment variable and secret file management, along with self-hosted alternatives for services similar to Vercel and Supabase.",
+    "description": "Built a personal self-hosted cloud environment for deploying full-stack applications and backend services. Implemented Docker-based deployments, Nginx reverse-proxy routing, Cloudflare secure public access, MinIO S3-compatible object storage, and environment/secret management to practice production-style infrastructure workflows.",
     "image": "/server.jpg",
     "tags": ["Docker", "Nginx", "Cloudflare", "MinIO", "Linux", "Self Hosting", "DevOps", "Infrastructure", "Reverse Proxy", "S3 Storage", "Networking"],
     "category": "backend",
@@ -58,7 +58,7 @@
   {
     "id": 11,
     "title": "Cloudverse - Cloud Management & FinOps Platform",
-    "description": "Contributed to a cloud management and FinOps platform by developing the Chargeback module for enterprise cloud cost allocation and financial analytics. Built backend services for pool-based cost allocation, direct and shared cost distribution, Reserved Instance and Savings Plan allocations, and ledger-based cost tracking across organizational cost centers. Implemented automated ledger generation and cost processing workflows using scheduled jobs and analytics pipelines.",
+    "description": "Contributed to a cloud management and FinOps platform by developing backend workflows for enterprise cloud cost allocation and financial analytics. Worked on pool-based cost allocation, direct and shared cost distribution, Reserved Instance and Savings Plan allocations, ledger-based tracking, and scheduled cost-processing workflows.",
     "image": "/cloudverse.png",
     "tags": ["NestJS", "GraphQL", "Prisma ORM", "PostgreSQL", "Redis", "ClickHouse", "Apache Airflow", "AWS", "Azure", "Google Cloud", "FinOps", "Backend", "Analytics"],
     "category": "backend",
@@ -72,7 +72,7 @@
   {
     "id": 13,
     "title": "Realm - Real Estate Mobile Application",
-    "description": "Developed a cross-platform real estate mobile application for Android and iOS enabling users to explore residential and commercial properties, view property details, and schedule appointments with property dealers. Built mobile UI flows, API integrations, authentication, property listing management, appointment booking workflows, and production deployment processes using Ionic Capacitor.",
+    "description": "Developed a cross-platform real-estate application for Android and iOS with property discovery, property details, authentication, API integrations, and appointment-booking workflows. Worked on mobile UI flows and production deployment using Ionic Capacitor.",
     "image": "/logo.png",
     "tags": ["Ionic", "Capacitor", "Android Studio", "Xcode", "Mobile Development", "Cross Platform", "REST APIs", "TypeScript", "Android", "iOS"],
     "category": "mobile",
@@ -86,13 +86,13 @@
   {
     "id": 6,
     "title": "Portfolio Website",
-    "description": "Modern portfolio with React 19, TailwindCSS 4, Three.js animations, SEO optimization, and responsive design.",
+    "description": "Responsive developer portfolio built with React, Tailwind CSS, animations, lazy loading, SEO metadata, project filtering, and a contact experience designed to showcase production engineering work.",
     "image": "/logo.png",
-    "tags": ["React 19", "TailwindCSS 4", "Three.js", "Framer Motion", "Vite"],
+    "tags": ["React 19", "TailwindCSS 4", "Framer Motion", "Vite"],
     "category": "frontend",
     "githubUrl": "https://github.com/renukaprasad-ms/portfolio",
-    "demoUrl": "https://renuka-prasad-portfolio.netlify.app/",
-    "period": "April 2025 - July 2025",
+    "demoUrl": "https://renukaprasad.in/",
+    "period": "April 2025 - Present",
     "role": "Front-end Developer",
     "teamSize": 1,
     "featured": false
